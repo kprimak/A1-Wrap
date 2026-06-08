@@ -1144,7 +1144,10 @@
           </div>
         </div>
 
-        <form class="contact-form" aria-label="Formulaire de soumission" novalidate>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" aria-label="Formulaire de soumission">
+          <input type="hidden" name="access_key" value="9d2100d9-d9a9-4325-ac69-23ac25893e22">
+          <input type="hidden" name="subject" value="Nouvelle soumission – A1 Wrap">
+          <input type="hidden" name="redirect" value="false">
           <div class="form-row">
             <div class="form-group">
               <label for="prenom">Prénom</label>
@@ -1180,7 +1183,13 @@
             <label for="message">Message (optionnel)</label>
             <textarea id="message" name="message" placeholder="Décrivez votre véhicule, couleur souhaitée, délai…"></textarea>
           </div>
-          <button type="submit" class="form-submit">Envoyer ma Demande</button>
+          <button type="submit" class="form-submit" id="formSubmitBtn">Envoyer ma Demande</button>
+          <div id="formSuccess" style="display:none; background:#e6faf5; border:1.5px solid #00C4C8; border-radius:10px; padding:1rem 1.25rem; color:#0D1B2A; font-size:0.95rem; text-align:center;">
+            ✓ Merci ! Votre demande a été envoyée. Nous vous répondons dans les 24 heures.
+          </div>
+          <div id="formError" style="display:none; background:#fef2f2; border:1.5px solid #f87171; border-radius:10px; padding:1rem 1.25rem; color:#7f1d1d; font-size:0.95rem; text-align:center;">
+            Une erreur est survenue. Veuillez réessayer ou nous appeler directement.
+          </div>
         </form>
 
       </div>
@@ -1198,6 +1207,36 @@
   </footer>
 
   <script>
+    // Web3Forms async submission
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('formSubmitBtn');
+      const success = document.getElementById('formSuccess');
+      const error = document.getElementById('formError');
+      btn.textContent = 'Envoi en cours…';
+      btn.disabled = true;
+      success.style.display = 'none';
+      error.style.display = 'none';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(contactForm)
+        });
+        const data = await res.json();
+        if (data.success) {
+          success.style.display = 'block';
+          contactForm.reset();
+        } else {
+          error.style.display = 'block';
+        }
+      } catch {
+        error.style.display = 'block';
+      }
+      btn.textContent = 'Envoyer ma Demande';
+      btn.disabled = false;
+    });
+
     // Sticky nav shadow on scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
