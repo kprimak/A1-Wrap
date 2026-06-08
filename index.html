@@ -66,21 +66,44 @@
     }
 
     .nav-logo-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
+      display: none;
     }
 
     .nav-logo-text {
       font-family: 'Poppins', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 1.35rem;
       color: var(--navy);
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
       white-space: nowrap;
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 0;
     }
+
+    .nav-logo-a1 {
+      color: var(--navy);
+    }
+
+    .nav-logo-wrap {
+      color: var(--teal);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-logo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, var(--teal), transparent);
+      border-radius: 2px;
+    }
+
 
     .nav-links {
       display: flex;
@@ -777,8 +800,9 @@
   <!-- ── NAV ──────────────────────────────────────── -->
   <nav id="navbar" role="navigation" aria-label="Main Navigation">
     <a href="#" class="nav-logo" aria-label="A1 Wrap – Home">
-      <img class="nav-logo-icon" src="logo.jpeg" alt="A1 Wrap logo">
-      <span class="nav-logo-text">A1 Wrap</span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-a1">A1&nbsp;</span><span class="nav-logo-wrap">WRAP</span>
+      </span>
     </a>
 
     <ul class="nav-links" id="navLinks">
