@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 Wrap – Installation de Revêtements Vinyle à Québec</title>
+  <meta name="description" content="Service d'installation de revêtements vinyle à Québec. Wrap de véhicules, protection de peinture, lettrage commercial. Rapide, efficace et professionnel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:        #00C4C8;
+      --teal-dark:   #009fa3;
+      --navy:        #0D1B2A;
+      --navy-light:  #162535;
+      --white:       #ffffff;
+      --gray-50:     #f8fafc;
+      --gray-100:    #f1f5f9;
+      --gray-200:    #e2e8f0;
+      --gray-500:    #64748b;
+      --gray-600:    #475569;
+      --gray-700:    #334155;
+      --text:        #1a2536;
+      --text-muted:  #4a5c72;
+      --img-ph:      #c8cdd4;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: 70px;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.10); }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700 !important;
+      font-size: 0.9rem !important;
+      white-space: nowrap;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--teal) !important; }
+
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-color: var(--img-ph);
+      /* TO REPLACE: background-image: url('images/hero.jpg'); background-size: cover; background-position: center; */
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        140deg,
+        rgba(13,27,42,0.80) 0%,
+        rgba(13,27,42,0.60) 55%,
+        rgba(13,27,42,0.45) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 9rem 2.5rem 5rem;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.2rem, 7.5vw, 7rem);
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title .accent {
+      color: var(--teal);
+      font-style: italic;
+      display: block;
+    }
+
+    .hero-subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.75rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.9rem 2.1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .btn-primary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid rgba(255,255,255,0.45);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.80);
+    }
+
+    .btn-outline:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 40px;
+      background: rgba(255,255,255,0.4);
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(200%); }
+    }
+
+    /* ── STATS BAR ─────────────────────────────────────── */
+    .stats-bar {
+      background: var(--navy);
+      padding: 2.75rem 2.5rem;
+    }
+
+    .stats-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-top: 0.35rem;
+    }
+
+    /* ── SHARED SECTION ────────────────────────────────── */
+    .section { padding: 6rem 2.5rem; }
+
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+
+    .section-title .accent {
+      color: var(--teal);
+      font-style: italic;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ── SERVICES ──────────────────────────────────────── */
+    .services-section { background: var(--white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+    }
+
+    .service-card-img {
+      width: 100%;
+      height: 220px;
+      background-color: var(--img-ph);
+      /* TO REPLACE: background-image: url('images/service-X.jpg'); background-size: cover; background-position: center; */
+    }
+
+    .service-card-body {
+      padding: 1.8rem 1.8rem 2.1rem;
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--teal);
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-icon svg {
+      width: 27px;
+      height: 27px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.7rem;
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.72;
+    }
+
+    /* ── ABOUT ─────────────────────────────────────────── */
+    .about-section { background: var(--gray-50); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5.5rem;
+      align-items: center;
+    }
+
+    .about-image-wrap { position: relative; }
+
+    .about-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background-color: var(--img-ph);
+      /* TO REPLACE: background-image: url('images/about.jpg'); background-size: cover; background-position: center; */
+      border-radius: 22px;
+    }
+
+    .about-stat-card {
+      position: absolute;
+      bottom: -1.75rem;
+      right: -1.75rem;
+      background: var(--teal);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,196,200,0.35);
+    }
+
+    .about-stat-big {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .about-stat-sub {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.85;
+      margin-top: 0.3rem;
+    }
+
+    .about-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .about-title .accent {
+      color: var(--teal);
+      font-style: italic;
+    }
+
+    .about-intro {
+      color: var(--text-muted);
+      font-size: 1.03rem;
+      line-height: 1.8;
+      margin-bottom: 1.75rem;
+    }
+
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .about-testimonial {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.3rem 1.6rem;
+      border-left: 3px solid var(--teal);
+      font-style: italic;
+      color: var(--gray-600);
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    /* ── TESTIMONIALS ──────────────────────────────────── */
+    .testimonials-section { background: var(--white); }
+
+    .stars-row {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      color: #f59e0b;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--gray-50);
+      border-radius: 18px;
+      padding: 2rem;
+      border: 1px solid var(--gray-200);
+      transition: box-shadow 0.2s;
+    }
+
+    .testimonial-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    .t-stars {
+      color: #f59e0b;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    .t-text {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.72;
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+
+    .t-author {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--navy);
+    }
+
+    /* ── CTA SECTION ───────────────────────────────────── */
+    .cta-section {
+      background: var(--navy);
+      padding: 5.5rem 2.5rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+
+    .cta-section h2 .accent { color: var(--teal); font-style: italic; }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-teal {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.9rem 2.1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-teal:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .btn-teal:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+    /* ── CONTACT ───────────────────────────────────────── */
+    .contact-section { background: var(--gray-50); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-title .accent { color: var(--teal); font-style: italic; }
+
+    .contact-intro {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 1rem; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.97rem;
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--teal);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .form-group label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.8rem 1rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--teal); }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-submit {
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .form-submit:hover { background: var(--teal-dark); }
+    .form-submit:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: #06101a;
+      color: rgba(255,255,255,0.45);
+      padding: 2.25rem 2.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .about-grid { gap: 3.5rem; }
+      .contact-grid { gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+
+      .nav-links { display: none; }
+
+      .nav-hamburger { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px; left: 0; right: 0;
+        background: var(--white);
+        padding: 1.5rem 2rem 2rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+      }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+      .services-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-stat-card { right: 1rem; bottom: -1.25rem; }
+
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .section { padding: 4.5rem 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.5rem; }
+      .hero-actions { flex-direction: column; max-width: 300px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <a href="#" class="nav-logo" aria-label="A1 Wrap – Accueil">
+      <!-- Logo icon: vinyl film roll / wrap diamond -->
+      <svg class="nav-logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="38" height="38" rx="10" fill="#0D1B2A"/>
+        <path d="M19 8 L30 14.5 L30 23.5 L19 30 L8 23.5 L8 14.5 Z" stroke="#00C4C8" stroke-width="2" fill="none" stroke-linejoin="round"/>
+        <path d="M19 8 L19 30 M8 14.5 L30 23.5 M30 14.5 L8 23.5" stroke="#00C4C8" stroke-width="1.2" stroke-opacity="0.45"/>
+        <circle cx="19" cy="19" r="3" fill="#00C4C8"/>
+      </svg>
+      <span class="nav-logo-text">A1 WRAP</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#apropos">À Propos</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="tel:+14185555555" class="nav-cta" aria-label="Appel urgence A1 Wrap">
+          Soumission (418) 555-5555
+        </a>
+      </li>
+    </ul>
+
+    <button class="nav-hamburger" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section class="hero" aria-label="Bannière principale">
+    <div class="hero-bg" role="img" aria-label="Véhicule en cours de wrap vinyle"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        POSE &amp;
+        <span class="accent">TRANSFORMATION</span>
+      </h1>
+      <p class="hero-subtitle">
+        Service d'installation de revêtements vinyle à Québec. Rapide, efficace et professionnel.
+        On s'occupe de vos véhicules, flottes commerciales et enseignes pour que vous vous démarquiez.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Soumission Gratuite
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+14185555555" class="btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.22 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (418) 555-5555
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"></div>
+  </section>
+
+  <!-- ── STATS BAR ─────────────────────────────────── -->
+  <div class="stats-bar" aria-label="Chiffres clés">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-value">5/5</div>
+        <div class="stat-label">Note Google</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Garanti Satisfaction</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">48h</div>
+        <div class="stat-label">Délai de Réponse</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">QC</div>
+        <div class="stat-label">Service Local</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ──────────────────────────────────── -->
+  <section id="services" class="section services-section" aria-labelledby="services-heading">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title" id="services-heading">Services Experts &amp; <span class="accent">Rapides</span></h2>
+        <p class="section-subtitle">
+          Que ce soit pour un véhicule personnel, une flotte commerciale ou une enseigne,
+          nous intervenons avec précision et professionnalisme.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Wrap complet de véhicule"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Car icon -->
+              <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V9a2 2 0 012-2h1l3-4h8l3 4h1a2 2 0 012 2v6a2 2 0 01-2 2h-2"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/></svg>
+            </div>
+            <h3 class="service-title">Wrap Complet de Véhicule</h3>
+            <p class="service-desc">
+              Enveloppement complet de votre véhicule en vinyle haute qualité.
+              Finition brillante, matte ou satinée avec une précision millimétrique pour un résultat impeccable.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Wrap partiel et accents"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Layers icon -->
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="service-title">Wrap Partiel &amp; Accents</h3>
+            <p class="service-desc">
+              Application sur capot, toit, poignées ou tout autre élément.
+              Personnalisez et protégez des sections ciblées sans débourser pour un wrap complet.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Protection de peinture PPF"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Shield icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="service-title">Protection de Peinture (PPF)</h3>
+            <p class="service-desc">
+              Film de protection transparent auto-cicatrisant contre les éclats de roches,
+              égratignures et intempéries. Préservez la valeur de revente de votre véhicule.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Wrap de flotte commerciale"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Truck icon -->
+              <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="service-title">Wrap de Flotte Commerciale</h3>
+            <p class="service-desc">
+              Uniformisez l'image de votre entreprise sur toute votre flotte de véhicules.
+              Tarifs de volume avantageux et installation rapide pour minimiser les temps d'arrêt.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Lettrage et décalques"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Tag icon -->
+              <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </div>
+            <h3 class="service-title">Lettrage &amp; Décalques</h3>
+            <p class="service-desc">
+              Conception et installation de lettrage commercial, logos et décalques
+              personnalisés sur véhicules. Transformez votre voiture en outil de marketing mobile.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Enseignes et vitrines"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Storefront / building icon -->
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="service-title">Enseignes &amp; Vitrines</h3>
+            <p class="service-desc">
+              Revêtements vinyle pour vitrines, enseignes et surfaces commerciales.
+              Attirez l'attention avec un habillage professionnel adapté à votre identité de marque.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────────── -->
+  <section id="apropos" class="section about-section" aria-labelledby="about-heading">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <div class="about-image-wrap">
+          <div class="about-image" role="img" aria-label="L'équipe A1 Wrap au travail"></div>
+          <div class="about-stat-card" aria-label="8 ans d'expertise">
+            <div class="about-stat-big">8+</div>
+            <div class="about-stat-sub">Années d'Expertise</div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2 class="about-title" id="about-heading">
+            Votre Référence en
+            <span class="accent">Revêtement Vinyle</span>
+          </h2>
+          <p class="about-intro">
+            A1 Wrap est né d'une passion pour l'automobile et le design. Nous offrons
+            un service fiable, transparent et capable d'intervenir rapidement pour
+            donner à votre véhicule le look que vous méritez.
+          </p>
+          <ul class="about-list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Service prompt et efficace (promesses respectées)
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Prix raisonnables et sans frais cachés
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Matériaux vinyle de qualité professionnelle (3M, Avery)
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Garantie sur tous nos travaux
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Instructions claires et suivi post-installation
+            </li>
+          </ul>
+          <blockquote class="about-testimonial">
+            "Excellent travail ! J'ai appelé le lundi, ils ont pris mon véhicule le mercredi,
+            et le vendredi mon camion était méconnaissable. Je recommande fortement A1 Wrap."
+            <br><br>— <strong>Marc-André Bolduc</strong>
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────── -->
+  <section id="temoignages" class="section testimonials-section" aria-labelledby="temoignages-heading">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="stars-row" aria-hidden="true">★★★★★</span>
+        <h2 class="section-title" id="temoignages-heading">
+          Ce que disent <span class="accent">nos clients</span>
+        </h2>
+        <p class="section-subtitle">Une réputation bâtie sur la confiance et l'efficacité.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "Résultat impeccable sur mon VUS. Le wrap matte noir donne un look
+            incroyable et la qualité de pose est irréprochable. Équipe professionnelle et ponctuelle."
+          </p>
+          <p class="t-author">— Joëlle Tremblay</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "Wrap de flotte pour mes 6 camions de livraison. Tarif compétitif, délais respectés
+            et le rendu est parfait. Mes clients remarquent nos véhicules partout en ville !"
+          </p>
+          <p class="t-author">— Patrick Gagnon, ProLivraison Québec</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "PPF sur le capot et les ailes avant. Travail soigné, film à peine visible et la
+            peinture est protégée pour les années à venir. Vaut vraiment chaque dollar."
+          </p>
+          <p class="t-author">— Étienne Bouchard</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "Ils ont habillé notre vitrine et nos deux véhicules en un seul passage.
+            Notre image de marque est maintenant uniforme et très professionnelle."
+          </p>
+          <p class="t-author">— Sandrine Côté, Studio Déco+</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "Wrap partiel sur le toit et les rétroviseurs en chrome noir. Exactement
+            ce que je voulais, rendu parfait. Service rapide et prix honnête."
+          </p>
+          <p class="t-author">— Rémi Lapointe</p>
+        </article>
+        <article class="testimonial-card">
+          <div class="t-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p class="t-text">
+            "Équipe super professionnelle, conseils personnalisés pour choisir la couleur
+            et la finition. Mon véhicule est maintenant unique. Je reviendrai sans hésiter !"
+          </p>
+          <p class="t-author">— Mélanie Fortin</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BAND ───────────────────────────────────── -->
+  <div class="cta-section" aria-label="Appel à l'action">
+    <h2>Prêt à <span class="accent">Transformer</span> votre Véhicule ?</h2>
+    <p>Obtenez une soumission gratuite dès aujourd'hui. Réponse en moins de 24 heures.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-teal">
+        Soumission Gratuite
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:+14185555555" class="btn-outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.22 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (418) 555-5555
+      </a>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ────────────────────────────────────── -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <div>
+          <h2 class="contact-title" id="contact-heading">
+            Contactez-nous pour une
+            <span class="accent">Soumission Gratuite</span>
+          </h2>
+          <p class="contact-intro">
+            Remplissez le formulaire ou appelez-nous directement. Nous vous répondons
+            dans les 24 heures avec une estimation détaillée pour votre projet.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.22 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <span>(418) 555-5555</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <span>info@a1wrap.ca</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span>Québec, QC, Canada</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span>Lun–Ven : 8h00 – 18h00</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" aria-label="Formulaire de soumission" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Jean" autocomplete="given-name" required>
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Tremblay" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Courriel</label>
+            <input type="email" id="email" name="email" placeholder="jean@exemple.com" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="(418) 555-0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choisissez un service…</option>
+              <option>Wrap Complet de Véhicule</option>
+              <option>Wrap Partiel &amp; Accents</option>
+              <option>Protection de Peinture (PPF)</option>
+              <option>Wrap de Flotte Commerciale</option>
+              <option>Lettrage &amp; Décalques</option>
+              <option>Enseignes &amp; Vitrines</option>
+              <option>Autre / Je ne suis pas certain</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre véhicule, couleur souhaitée, délai…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer ma Demande</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <p>© 2025 A1 Wrap – Tous droits réservés. | Québec, Canada</p>
+    <p style="margin-top:0.5rem;">
+      <a href="#services">Services</a> &nbsp;·&nbsp;
+      <a href="#apropos">À Propos</a> &nbsp;·&nbsp;
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // Sticky nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile hamburger menu
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>
