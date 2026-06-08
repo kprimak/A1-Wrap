@@ -344,10 +344,8 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      max-width: 860px;
-      margin: 0 auto;
     }
 
     .service-card {
@@ -770,7 +768,7 @@
 
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 
-      .services-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .services-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-stat-card { right: 1rem; bottom: -1.25rem; }
@@ -892,20 +890,35 @@
 
         <!-- Card 1 -->
         <article class="service-card">
-          <div class="service-card-img" role="img" aria-label="Car wrapping"></div>
+          <div class="service-card-img" role="img" aria-label="Full vehicle wrap"></div>
           <div class="service-card-body">
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V9a2 2 0 012-2h1l3-4h8l3 4h1a2 2 0 012 2v6a2 2 0 01-2 2h-2"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/></svg>
             </div>
-            <h3 class="service-title">Car Wrapping</h3>
+            <h3 class="service-title">Full Vehicle Wrap</h3>
             <p class="service-desc">
-              Full or partial vehicle wraps in premium vinyl. Gloss, matte or satin finish
-              applied with precision for a showroom-quality result that turns heads.
+              Complete coverage of your vehicle in premium vinyl. Gloss, matte or satin finish
+              applied with millimetre precision for a flawless, showroom-quality result.
             </p>
           </div>
         </article>
 
         <!-- Card 2 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Partial vehicle wrap"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="service-title">Partial Vehicle Wrap</h3>
+            <p class="service-desc">
+              Target specific panels — hood, roof, mirrors or doors.
+              Customise and protect key sections of your vehicle without a full wrap investment.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
         <article class="service-card">
           <div class="service-card-img" role="img" aria-label="Lettering"></div>
           <div class="service-card-body">
@@ -920,22 +933,22 @@
           </div>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 4 -->
         <article class="service-card">
           <div class="service-card-img" role="img" aria-label="Window tinting"></div>
           <div class="service-card-body">
             <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M2 11h20"/><path d="M8 3v14M16 3v14" stroke-opacity="0.5"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M2 11h20"/></svg>
             </div>
             <h3 class="service-title">Window Tinting</h3>
             <p class="service-desc">
-              Professional window film installation for UV protection, heat reduction and privacy.
-              Available in multiple shades to suit your style and local regulations.
+              Professional window film for UV protection, heat reduction and privacy.
+              Available in multiple shades to match your style and local regulations.
             </p>
           </div>
         </article>
 
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <article class="service-card">
           <div class="service-card-img" role="img" aria-label="Headlight restoration"></div>
           <div class="service-card-body">
@@ -945,7 +958,22 @@
             <h3 class="service-title">Headlight Restoration</h3>
             <p class="service-desc">
               Restore cloudy or yellowed headlights to crystal-clear condition.
-              Improve visibility, safety and your vehicle's appearance in just a few hours.
+              Better visibility, improved safety and a cleaner look — done in hours.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="service-card">
+          <div class="service-card-img" role="img" aria-label="Exterior car wash"></div>
+          <div class="service-card-body">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke-dasharray="3 2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M7 10c.5-1 1.5-1 2 0s1.5 1 2 0 1.5-1 2 0"/></svg>
+            </div>
+            <h3 class="service-title">Exterior Car Wash</h3>
+            <p class="service-desc">
+              Thorough exterior wash to keep your vehicle looking its best.
+              Safe, hand-friendly techniques that protect your wrap and paintwork.
             </p>
           </div>
         </article>
@@ -1158,10 +1186,12 @@
             <label for="service">Desired Service <span style="color:var(--teal)">*</span></label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Choose a service…</option>
-              <option>Car Wrapping</option>
+              <option>Full Vehicle Wrap</option>
+              <option>Partial Vehicle Wrap</option>
               <option>Lettering</option>
               <option>Window Tinting</option>
               <option>Headlight Restoration</option>
+              <option>Exterior Car Wash</option>
               <option>Other / Not sure yet</option>
             </select>
           </div>
