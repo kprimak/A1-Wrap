@@ -205,9 +205,27 @@
     }
 
     .hero-title .accent {
-      color: var(--teal);
       font-style: italic;
       display: block;
+      color: transparent;
+      background: linear-gradient(
+        180deg,
+        #e0fafa 0%,
+        #00C4C8 25%,
+        #ffffff 50%,
+        #00C4C8 75%,
+        #7af5f5 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: none;
+      filter:
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.95))
+        drop-shadow(-1px -1px 0px rgba(0,0,0,0.6))
+        drop-shadow(0 4px 12px rgba(0,0,0,0.7));
+      transform: perspective(700px) rotateX(6deg) skewX(-1deg);
+      transform-origin: left bottom;
+      letter-spacing: 0.01em;
     }
 
     .hero-subtitle {
