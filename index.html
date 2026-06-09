@@ -182,6 +182,17 @@
       padding: 9rem 2.5rem 5rem;
     }
 
+    .hero-logo {
+      width: clamp(90px, 12vw, 140px);
+      height: clamp(90px, 12vw, 140px);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.25);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      margin-bottom: 1.8rem;
+      display: block;
+    }
+
     .hero-title {
       font-family: 'Poppins', sans-serif;
       font-weight: 900;
@@ -837,6 +848,7 @@
     <div class="hero-bg" role="img" aria-label="Vehicle being wrapped in vinyl"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
+      <img src="logo.jpeg" alt="A1 Wrap logo" class="hero-logo">
       <h1 class="hero-title">
         Make your vehicle
         <span class="accent">A Moving Advertisement</span>
