@@ -215,7 +215,7 @@
       display: block;
       position: relative;
       top: 2.1rem;
-      left: 9.3rem;
+      left: calc(-91.9vw + 1472px);
       font-size: 0.82em;
     }
 
@@ -224,7 +224,7 @@
       font-style: italic;
       display: block;
       position: relative;
-      left: 12.45%;
+      left: calc(-91.9vw + 1472px);
       top: 1.6rem;
       font-size: 0.72em;
     }
@@ -812,12 +812,25 @@
     footer a:hover { text-decoration: underline; }
 
     /* ── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 1280px) {
+      .hero-line1,
+      .hero-title .accent {
+        left: calc(-41.9vw + 872px);
+      }
+    }
+
     @media (max-width: 1024px) {
       .about-grid { gap: 3.5rem; }
       .contact-grid { gap: 3rem; }
     }
 
     @media (max-width: 768px) {
+      .hero-line1,
+      .hero-title .accent {
+        left: 0;
+        top: 0;
+      }
+
       nav { padding: 0 1.5rem; }
 
       .nav-links { display: none; }
