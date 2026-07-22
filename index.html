@@ -773,6 +773,28 @@
     .form-submit:hover { background: var(--teal-dark); }
     .form-submit:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 
+    /* ── LANG TOGGLE ───────────────────────────────────── */
+    .lang-toggle {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.80);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 0.28rem 0.75rem;
+      border-radius: 50px;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      margin-left: 0.75rem;
+      flex-shrink: 0;
+    }
+    .lang-toggle:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      background: rgba(0,153,230,0.08);
+    }
+
     /* ── FOOTER ────────────────────────────────────────── */
     footer {
       background: #06101a;
@@ -853,16 +875,18 @@
     </a>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#services" data-i18n="nav_services">Services</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonials</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       <li>
-        <a href="tel:+15142608566" class="nav-cta" aria-label="Call A1 Wrap">
+        <a href="tel:+15142608566" class="nav-cta" aria-label="Call A1 Wrap" data-i18n="nav_cta">
           Get a Quote (514) 260-8566
         </a>
       </li>
     </ul>
+
+    <button id="langToggle" class="lang-toggle" aria-label="Switch language / Changer de langue">FR</button>
 
     <button class="nav-hamburger" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
@@ -879,15 +903,15 @@
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
 <h1 class="hero-title">
-        <span class="hero-line1">Make your vehicle</span>
-        <span class="accent">A Moving Ad</span>
+        <span class="hero-line1" data-i18n="hero_line1">Make your vehicle</span>
+        <span class="accent" data-i18n="hero_accent">A Moving Ad</span>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
         Premium vehicle wraps, tinting, lettering, and headlight restoration in Montreal. Fast, honest, and reliable service for personal cars and commercial fleets.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">
-          Free Quote
+          <span data-i18n="btn_quote">Free Quote</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="tel:+15142608566" class="btn-outline">
@@ -904,19 +928,19 @@
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-value">5/5</div>
-        <div class="stat-label">Google Rating</div>
+        <div class="stat-label" data-i18n="stat_google">Google Rating</div>
       </div>
       <div class="stat-item">
         <div class="stat-value">100%</div>
-        <div class="stat-label">Satisfaction Guaranteed</div>
+        <div class="stat-label" data-i18n="stat_satisfaction">Satisfaction Guaranteed</div>
       </div>
       <div class="stat-item">
         <div class="stat-value">48h</div>
-        <div class="stat-label">Response Time</div>
+        <div class="stat-label" data-i18n="stat_response">Response Time</div>
       </div>
       <div class="stat-item">
         <div class="stat-value">QC</div>
-        <div class="stat-label">Local Service</div>
+        <div class="stat-label" data-i18n="stat_local">Local Service</div>
       </div>
     </div>
   </div>
@@ -925,8 +949,8 @@
   <section id="services" class="section services-section" aria-labelledby="services-heading">
     <div class="section-inner">
       <div class="section-header">
-        <h2 class="section-title" id="services-heading">Flawless &amp; <span class="accent">Fast Services</span></h2>
-        <p class="section-subtitle">
+        <h2 class="section-title" id="services-heading" data-i18n-html="services_title_html">Flawless &amp; <span class="accent">Fast Services</span></h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">
           Whether it's a personal vehicle, a commercial fleet or a storefront sign,
           we deliver with precision and professionalism.
         </p>
@@ -941,8 +965,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
             </div>
-            <h3 class="service-title">Partial Vehicle Wrap</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc1_title">Partial Vehicle Wrap</h3>
+            <p class="service-desc" data-i18n="svc1_desc">
               Target specific panels — hood, roof, mirrors or doors.
               Customise and protect key sections of your vehicle without a full wrap investment.
             </p>
@@ -956,8 +980,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V9a2 2 0 012-2h1l3-4h8l3 4h1a2 2 0 012 2v6a2 2 0 01-2 2h-2"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/></svg>
             </div>
-            <h3 class="service-title">Full Vehicle Wrap</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc2_title">Full Vehicle Wrap</h3>
+            <p class="service-desc" data-i18n="svc2_desc">
               Complete coverage of your vehicle in premium vinyl. Gloss, matte or satin finish
               applied with millimetre precision for a flawless, showroom-quality result.
             </p>
@@ -971,8 +995,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
             </div>
-            <h3 class="service-title">Lettering</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc3_title">Lettering</h3>
+            <p class="service-desc" data-i18n="svc3_desc">
               Custom vinyl lettering for vehicles, storefronts and commercial signage.
               Make your brand visible and memorable wherever you go.
             </p>
@@ -986,8 +1010,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M2 11h20"/></svg>
             </div>
-            <h3 class="service-title">Window Tinting</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc4_title">Window Tinting</h3>
+            <p class="service-desc" data-i18n="svc4_desc">
               Professional window film for UV protection, heat reduction and privacy.
               Available in multiple shades to match your style and local regulations.
             </p>
@@ -1001,8 +1025,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
             </div>
-            <h3 class="service-title">Image Application</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc5_title">Image Application</h3>
+            <p class="service-desc" data-i18n="svc5_desc">
               Custom image and graphic application on vehicles and surfaces.
               High-resolution prints installed with precision for a bold, eye-catching finish.
             </p>
@@ -1016,8 +1040,8 @@
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             </div>
-            <h3 class="service-title">Headlight Restoration</h3>
-            <p class="service-desc">
+            <h3 class="service-title" data-i18n="svc6_title">Headlight Restoration</h3>
+            <p class="service-desc" data-i18n="svc6_desc">
               Restore cloudy or yellowed headlights to crystal-clear condition.
               Better visibility, improved safety and a cleaner look — done in hours.
             </p>
@@ -1037,16 +1061,16 @@
           <div class="about-image" role="img" aria-label="A1 Wrap BMW" style="background-image: url('Bmw.png'); background-size: cover; background-position: center;"></div>
           <div class="about-stat-card" aria-label="100% Customer Satisfaction">
             <div class="about-stat-big">100%</div>
-            <div class="about-stat-sub">Customer Satisfaction</div>
+            <div class="about-stat-sub" data-i18n="about_stat_sub">Customer Satisfaction</div>
           </div>
         </div>
 
         <div class="about-text">
-          <h2 class="about-title" id="about-heading">
+          <h2 class="about-title" id="about-heading" data-i18n-html="about_title_html">
             Your Reference for
             <span class="accent">Vinyl Wrapping</span>
           </h2>
-          <p class="about-intro">
+          <p class="about-intro" data-i18n="about_intro">
             A1 Wrap was born from a passion for cars and design. We offer a reliable,
             transparent service with fast turnaround times — giving your vehicle
             the look it deserves.
@@ -1054,23 +1078,23 @@
           <ul class="about-list">
             <li>
               <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Prompt, reliable service (we keep our promises!)
+              <span data-i18n="about_li1">Prompt, reliable service (we keep our promises!)</span>
             </li>
             <li>
               <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Fair pricing with no hidden fees
+              <span data-i18n="about_li2">Fair pricing with no hidden fees</span>
             </li>
             <li>
               <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Professional-grade vinyl materials
+              <span data-i18n="about_li3">Professional-grade vinyl materials</span>
             </li>
             <li>
               <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Flawless execution
+              <span data-i18n="about_li4">Flawless execution</span>
             </li>
 
           </ul>
-          <blockquote class="about-testimonial">
+          <blockquote class="about-testimonial" data-i18n-html="about_quote">
             "Excellent work! I called Monday, they took my truck Wednesday,
             and by Friday it was unrecognisable. I highly recommend A1 Wrap."
             <br><br>— <strong>Marc-André Bolduc</strong>
@@ -1086,10 +1110,10 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="stars-row" aria-hidden="true">★★★★★</span>
-        <h2 class="section-title" id="testimonials-heading">
+        <h2 class="section-title" id="testimonials-heading" data-i18n-html="testimonials_title_html">
           What Our <span class="accent">Clients Say</span>
         </h2>
-        <p class="section-subtitle">A reputation built on trust and quality.</p>
+        <p class="section-subtitle" data-i18n="testimonials_subtitle">A reputation built on trust and quality.</p>
       </div>
 
       <div class="testimonials-grid">
@@ -1141,11 +1165,11 @@
 
   <!-- ── CTA BAND ───────────────────────────────────── -->
   <div class="cta-section" aria-label="Call to action">
-    <h2>Ready to <span class="accent">Transform</span> Your Vehicle?</h2>
-    <p>Get a free quote today. We respond within 24 hours.</p>
+    <h2 data-i18n-html="cta_title_html">Ready to <span class="accent">Transform</span> Your Vehicle?</h2>
+    <p data-i18n="cta_subtitle">Get a free quote today. We respond within 24 hours.</p>
     <div class="cta-actions">
       <a href="#contact" class="btn-teal">
-        Free Quote
+        <span data-i18n="btn_quote">Free Quote</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <a href="tel:+15142608566" class="btn-outline">
@@ -1161,11 +1185,11 @@
       <div class="contact-grid">
 
         <div>
-          <h2 class="contact-title" id="contact-heading">
+          <h2 class="contact-title" id="contact-heading" data-i18n-html="contact_title_html">
             Contact Us for a
             <span class="accent">Free Quote</span>
           </h2>
-          <p class="contact-intro">
+          <p class="contact-intro" data-i18n="contact_intro">
             Fill out the form or call us directly. We'll get back to you
             within 24 hours with a detailed estimate for your project.
           </p>
@@ -1192,7 +1216,7 @@
               <div class="contact-item-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
-              <span>Mon–Fri: 8:00 AM – 6:00 PM</span>
+              <span data-i18n="contact_hours">Mon–Fri: 8:00 AM – 6:00 PM</span>
             </div>
           </div>
         </div>
@@ -1203,44 +1227,44 @@
           <input type="hidden" name="redirect" value="false">
           <div class="form-row">
             <div class="form-group">
-              <label for="prenom">First Name <span style="color:var(--teal)">*</span></label>
-              <input type="text" id="prenom" name="first_name" placeholder="John" autocomplete="given-name" required>
+              <label for="prenom"><span data-i18n="label_firstname">First Name</span> <span style="color:var(--teal)">*</span></label>
+              <input type="text" id="prenom" name="first_name" placeholder="John" data-i18n-placeholder="ph_firstname" autocomplete="given-name" required>
             </div>
             <div class="form-group">
-              <label for="nom">Last Name <span style="color:var(--teal)">*</span></label>
-              <input type="text" id="nom" name="last_name" placeholder="Smith" autocomplete="family-name" required>
+              <label for="nom"><span data-i18n="label_lastname">Last Name</span> <span style="color:var(--teal)">*</span></label>
+              <input type="text" id="nom" name="last_name" placeholder="Smith" data-i18n-placeholder="ph_lastname" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
-            <label for="email">Email <span style="color:var(--teal)">*</span></label>
+            <label for="email"><span data-i18n="label_email">Email</span> <span style="color:var(--teal)">*</span></label>
             <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required>
           </div>
           <div class="form-group">
-            <label for="telephone">Phone <span style="color:var(--teal)">*</span></label>
+            <label for="telephone"><span data-i18n="label_phone">Phone</span> <span style="color:var(--teal)">*</span></label>
             <input type="tel" id="telephone" name="phone" placeholder="(514) 260-8566" autocomplete="tel" required>
           </div>
           <div class="form-group">
-            <label for="service">Desired Service <span style="color:var(--teal)">*</span></label>
+            <label for="service"><span data-i18n="label_service">Desired Service</span> <span style="color:var(--teal)">*</span></label>
             <select id="service" name="service" required>
-              <option value="" disabled selected>Choose a service…</option>
-              <option>Partial Vehicle Wrap</option>
-              <option>Full Vehicle Wrap</option>
-              <option>Lettering</option>
-              <option>Window Tinting</option>
-              <option>Headlight Restoration</option>
-              <option>Image Application</option>
-              <option>Other / Not sure yet</option>
+              <option value="" disabled selected data-i18n="opt_choose">Choose a service…</option>
+              <option data-i18n="svc1_title">Partial Vehicle Wrap</option>
+              <option data-i18n="svc2_title">Full Vehicle Wrap</option>
+              <option data-i18n="svc3_title">Lettering</option>
+              <option data-i18n="svc4_title">Window Tinting</option>
+              <option data-i18n="svc6_title">Headlight Restoration</option>
+              <option data-i18n="svc5_title">Image Application</option>
+              <option data-i18n="opt_other">Other / Not sure yet</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" placeholder="Describe your vehicle, desired colour, timeline…"></textarea>
+            <label for="message"><span data-i18n="label_message">Message (optional)</span></label>
+            <textarea id="message" name="message" placeholder="Describe your vehicle, desired colour, timeline…" data-i18n-placeholder="ph_message"></textarea>
           </div>
-          <button type="submit" class="form-submit" id="formSubmitBtn">Submit Request</button>
-          <div id="formSuccess" style="display:none; background:#e6faf5; border:1.5px solid #00C4C8; border-radius:10px; padding:1rem 1.25rem; color:#0D1B2A; font-size:0.95rem; text-align:center;">
+          <button type="submit" class="form-submit" id="formSubmitBtn" data-i18n="btn_submit">Submit Request</button>
+          <div id="formSuccess" style="display:none; background:#e6faf5; border:1.5px solid #00C4C8; border-radius:10px; padding:1rem 1.25rem; color:#0D1B2A; font-size:0.95rem; text-align:center;" data-i18n="form_success">
             ✓ Thank you! Your request has been sent. We'll get back to you within 24 hours.
           </div>
-          <div id="formError" style="display:none; background:#fef2f2; border:1.5px solid #f87171; border-radius:10px; padding:1rem 1.25rem; color:#7f1d1d; font-size:0.95rem; text-align:center;">
+          <div id="formError" style="display:none; background:#fef2f2; border:1.5px solid #f87171; border-radius:10px; padding:1rem 1.25rem; color:#7f1d1d; font-size:0.95rem; text-align:center;" data-i18n="form_error">
             Something went wrong. Please try again or call us directly.
           </div>
         </form>
@@ -1251,11 +1275,11 @@
 
   <!-- ── FOOTER ─────────────────────────────────────── -->
   <footer>
-    <p>© 2026 A1 Wrap – All rights reserved. | Quebec, Canada</p>
+    <p data-i18n="footer_copy">© 2026 A1 Wrap – All rights reserved. | Quebec, Canada</p>
     <p style="margin-top:0.5rem;">
-      <a href="#services">Services</a> &nbsp;·&nbsp;
-      <a href="#about">About</a> &nbsp;·&nbsp;
-      <a href="#contact">Contact</a>
+      <a href="#services" data-i18n="nav_services">Services</a> &nbsp;·&nbsp;
+      <a href="#about" data-i18n="nav_about">About</a> &nbsp;·&nbsp;
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </p>
   </footer>
 
@@ -1305,7 +1329,7 @@
       const btn = document.getElementById('formSubmitBtn');
       const success = document.getElementById('formSuccess');
       const error = document.getElementById('formError');
-      btn.textContent = 'Sending…';
+      btn.textContent = currentLang === 'fr' ? 'Envoi en cours…' : 'Sending…';
       btn.disabled = true;
       success.style.display = 'none';
       error.style.display = 'none';
@@ -1324,7 +1348,7 @@
       } catch {
         error.style.display = 'block';
       }
-      btn.textContent = 'Submit Request';
+      btn.textContent = currentLang === 'fr' ? 'Envoyer la demande' : 'Submit Request';
       btn.disabled = false;
     });
 
@@ -1348,6 +1372,161 @@
         navLinks.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    // ── BILINGUAL TOGGLE ────────────────────────────────
+    var TRANSLATIONS = {
+      en: {
+        nav_services:    'Services',
+        nav_about:       'About',
+        nav_testimonials:'Testimonials',
+        nav_contact:     'Contact',
+        nav_cta:         'Get a Quote  (514) 260-8566',
+        hero_line1:      'Make your vehicle',
+        hero_accent:     'A Moving Ad',
+        hero_subtitle:   'Premium vehicle wraps, tinting, lettering, and headlight restoration in Montreal. Fast, honest, and reliable service for personal cars and commercial fleets.',
+        btn_quote:       'Free Quote',
+        stat_google:     'Google Rating',
+        stat_satisfaction:'Satisfaction Guaranteed',
+        stat_response:   'Response Time',
+        stat_local:      'Local Service',
+        services_title_html: 'Flawless &amp; <span class="accent">Fast Services</span>',
+        services_subtitle:   "Whether it's a personal vehicle, a commercial fleet or a storefront sign, we deliver with precision and professionalism.",
+        svc1_title: 'Partial Vehicle Wrap',
+        svc1_desc:  'Target specific panels — hood, roof, mirrors or doors. Customise and protect key sections of your vehicle without a full wrap investment.',
+        svc2_title: 'Full Vehicle Wrap',
+        svc2_desc:  'Complete coverage of your vehicle in premium vinyl. Gloss, matte or satin finish applied with millimetre precision for a flawless, showroom-quality result.',
+        svc3_title: 'Lettering',
+        svc3_desc:  'Custom vinyl lettering for vehicles, storefronts and commercial signage. Make your brand visible and memorable wherever you go.',
+        svc4_title: 'Window Tinting',
+        svc4_desc:  'Professional window film for UV protection, heat reduction and privacy. Available in multiple shades to match your style and local regulations.',
+        svc5_title: 'Image Application',
+        svc5_desc:  'Custom image and graphic application on vehicles and surfaces. High-resolution prints installed with precision for a bold, eye-catching finish.',
+        svc6_title: 'Headlight Restoration',
+        svc6_desc:  'Restore cloudy or yellowed headlights to crystal-clear condition. Better visibility, improved safety and a cleaner look — done in hours.',
+        about_title_html: 'Your Reference for <span class="accent">Vinyl Wrapping</span>',
+        about_intro: 'A1 Wrap was born from a passion for cars and design. We offer a reliable, transparent service with fast turnaround times — giving your vehicle the look it deserves.',
+        about_li1:   'Prompt, reliable service (we keep our promises!)',
+        about_li2:   'Fair pricing with no hidden fees',
+        about_li3:   'Professional-grade vinyl materials',
+        about_li4:   'Flawless execution',
+        about_quote: '“Excellent work! I called Monday, they took my truck Wednesday, and by Friday it was unrecognisable. I highly recommend A1 Wrap.”<br><br>— <strong>Marc-André Bolduc</strong>',
+        about_stat_sub: 'Customer Satisfaction',
+        testimonials_title_html: 'What Our <span class="accent">Clients Say</span>',
+        testimonials_subtitle:   'A reputation built on trust and quality.',
+        cta_title_html: 'Ready to <span class="accent">Transform</span> Your Vehicle?',
+        cta_subtitle:   'Get a free quote today. We respond within 24 hours.',
+        contact_title_html: 'Contact Us for a <span class="accent">Free Quote</span>',
+        contact_intro:  "Fill out the form or call us directly. We'll get back to you within 24 hours with a detailed estimate for your project.",
+        contact_hours:  'Mon–Fri: 8:00 AM – 6:00 PM',
+        label_firstname:'First Name',
+        label_lastname: 'Last Name',
+        ph_firstname:   'John',
+        ph_lastname:    'Smith',
+        label_email:    'Email',
+        label_phone:    'Phone',
+        label_service:  'Desired Service',
+        opt_choose:     'Choose a service…',
+        opt_other:      'Other / Not sure yet',
+        label_message:  'Message (optional)',
+        ph_message:     'Describe your vehicle, desired colour, timeline…',
+        btn_submit:     'Submit Request',
+        form_success:   "✓ Thank you! Your request has been sent. We'll get back to you within 24 hours.",
+        form_error:     'Something went wrong. Please try again or call us directly.',
+        footer_copy:    '© 2026 A1 Wrap – All rights reserved. | Quebec, Canada',
+      },
+      fr: {
+        nav_services:    'Services',
+        nav_about:       'À propos',
+        nav_testimonials:'Témoignages',
+        nav_contact:     'Contact',
+        nav_cta:         'Devis gratuit (514) 260-8566',
+        hero_line1:      'Faites de votre véhicule',
+        hero_accent:     'Une Pub Ambulante',
+        hero_subtitle:   'Pose de vinyle, vitres teintées, lettrage et restauration de phares à Montréal. Service rapide, honnête et fiable pour véhicules personnels et flottes commerciales.',
+        btn_quote:       'Devis gratuit',
+        stat_google:     'Note Google',
+        stat_satisfaction:'Satisfaction Garantie',
+        stat_response:   'Délai de Réponse',
+        stat_local:      'Service Local',
+        services_title_html: 'Services <span class="accent">Impeccables &amp; Rapides</span>',
+        services_subtitle:   'Que ce soit un véhicule personnel, une flotte commerciale ou une enseigne, nous livrons avec précision et professionnalisme.',
+        svc1_title: 'Pose Partielle de Vinyle',
+        svc1_desc:  'Ciblez des panneaux spécifiques — capot, toit, rétros ou portières. Personnalisez et protégez les sections clés de votre véhicule sans investissement complet.',
+        svc2_title: 'Pose Complète de Vinyle',
+        svc2_desc:  'Habillage complet de votre véhicule en vinyle premium. Finition brillante, mate ou satinée appliquée au millimètre pour un résultat impeccable.',
+        svc3_title: 'Lettrage',
+        svc3_desc:  'Lettrage vinyle personnalisé pour véhicules, vitrines et enseignes commerciales. Rendez votre marque visible et mémorable partout où vous allez.',
+        svc4_title: 'Vitres Teintées',
+        svc4_desc:  'Film de fenêtre professionnel pour protection UV, réduction de chaleur et intimité. Disponible en plusieurs teintes selon votre style et la réglementation locale.',
+        svc5_title: "Application d’Image",
+        svc5_desc:  "Application d’images et graphiques personnalisés sur véhicules et surfaces. Impressions haute résolution installées avec précision pour un résultat accrocheur.",
+        svc6_title: 'Restauration de Phares',
+        svc6_desc:  'Restaurez des phares brumeux ou jaunis à leur état cristallin. Meilleure visibilité, sécurité améliorée et look plus net — réalisé en quelques heures.',
+        about_title_html: 'Votre Référence en <span class="accent">Pose de Vinyle</span>',
+        about_intro: "A1 Wrap est né d’une passion pour les voitures et le design. Nous offrons un service fiable et transparent avec des délais rapides — donnant à votre véhicule le look qu’il mérite.",
+        about_li1:   'Service ponctuel et fiable (on tient nos promesses !)',
+        about_li2:   'Prix équitables sans frais cachés',
+        about_li3:   'Matériaux vinyle de qualité professionnelle',
+        about_li4:   'Exécution impeccable',
+        about_quote: '« Excellent travail ! J’ai appelé lundi, ils ont pris mon camion mercredi, et vendredi il était méconnaissable. Je recommande vivement A1 Wrap. »<br><br>— <strong>Marc-André Bolduc</strong>',
+        about_stat_sub: 'Satisfaction Client',
+        testimonials_title_html: 'Ce que disent nos <span class="accent">Clients</span>',
+        testimonials_subtitle:   'Une réputation bâtie sur la confiance et la qualité.',
+        cta_title_html: 'Prêt à <span class="accent">Transformer</span> votre Véhicule ?',
+        cta_subtitle:   "Obtenez un devis gratuit aujourd’hui. Nous répondons sous 24 heures.",
+        contact_title_html: 'Contactez-nous pour un <span class="accent">Devis Gratuit</span>',
+        contact_intro:  'Remplissez le formulaire ou appelez-nous directement. Nous vous répondrons sous 24 heures avec une estimation détaillée pour votre projet.',
+        contact_hours:  'Lun–Ven : 8h00 – 18h00',
+        label_firstname:'Prénom',
+        label_lastname: 'Nom de famille',
+        ph_firstname:   'Jean',
+        ph_lastname:    'Dupont',
+        label_email:    'Courriel',
+        label_phone:    'Téléphone',
+        label_service:  'Service désiré',
+        opt_choose:     'Choisir un service…',
+        opt_other:      'Autre / Pas encore sûr',
+        label_message:  'Message (optionnel)',
+        ph_message:     'Décrivez votre véhicule, la couleur souhaitée, les délais…',
+        btn_submit:     'Envoyer la demande',
+        form_success:   '✓ Merci ! Votre demande a été envoyée. Nous vous répondrons sous 24 heures.',
+        form_error:     'Une erreur s’est produite. Veuillez réessayer ou nous appeler directement.',
+        footer_copy:    '© 2026 A1 Wrap – Tous droits réservés. | Québec, Canada',
+      }
+    };
+
+    function applyLang(lang) {
+      var t = TRANSLATIONS[lang];
+      if (!t) return;
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.placeholder = t[key];
+      });
+      document.documentElement.lang = lang;
+      var btn = document.getElementById('langToggle');
+      if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
+      try { localStorage.setItem('a1wrap_lang', lang); } catch(e) {}
+    }
+
+    var langToggle = document.getElementById('langToggle');
+    var currentLang = 'en';
+    try {
+      var stored = localStorage.getItem('a1wrap_lang');
+      if (stored === 'fr') { currentLang = 'fr'; applyLang('fr'); }
+    } catch(e) {}
+
+    langToggle.addEventListener('click', function() {
+      currentLang = currentLang === 'en' ? 'fr' : 'en';
+      applyLang(currentLang);
     });
   </script>
 
