@@ -186,16 +186,16 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
-      max-width: 44vw;
+      white-space: nowrap;
     }
 
     .hero-title {
       font-family: 'Poppins', sans-serif;
       font-weight: 900;
-      font-size: clamp(3.2rem, 7.5vw, 7rem);
+      font-size: 7.5vw;
       line-height: 1.0;
       color: var(--white);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.03em;
       text-shadow: 0 2px 12px rgba(0,0,0,0.55), 0 0 60px rgba(0,0,0,0.30);
     }
@@ -214,8 +214,9 @@
 
     .hero-subtitle {
       color: rgba(255,255,255,0.92);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      max-width: 560px;
+      font-size: 1.8vw;
+      white-space: normal;
+      max-width: 38vw;
       line-height: 1.7;
       margin-bottom: 2.75rem;
       text-shadow: 0 1px 8px rgba(0,0,0,0.6);
@@ -728,8 +729,10 @@
         top: auto;
         transform: none;
         padding-top: 8rem;
-        max-width: 90vw;
+        white-space: normal;
       }
+      .hero-title { font-size: clamp(2.8rem, 10vw, 5rem); }
+      .hero-subtitle { font-size: clamp(0.95rem, 3.5vw, 1.1rem); max-width: 90vw; }
 
       nav { padding: 0 1.5rem; }
 
