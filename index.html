@@ -181,23 +181,12 @@
     }
 
     .hero-content {
-      position: relative;
+      position: absolute;
+      left: 17vw;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 9rem 2.5rem 5rem;
-    }
-
-    .hero-logo {
-      width: clamp(90px, 12vw, 140px);
-      height: clamp(90px, 12vw, 140px);
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255,255,255,0.25);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.45);
-      margin-bottom: 1.8rem;
-      display: block;
+      max-width: 44vw;
     }
 
     .hero-title {
@@ -213,9 +202,6 @@
 
     .hero-line1 {
       display: block;
-      position: relative;
-      top: 0vw;
-      left: calc(-22.85vw + 455px);
       font-size: 0.82em;
     }
 
@@ -223,9 +209,6 @@
       color: var(--teal);
       font-style: italic;
       display: block;
-      position: relative;
-      left: calc(-22.85vw + 455px);
-      top: -0.55vw;
       font-size: 0.72em;
     }
 
@@ -236,9 +219,6 @@
       line-height: 1.7;
       margin-bottom: 2.75rem;
       text-shadow: 0 1px 8px rgba(0,0,0,0.6);
-      position: relative;
-      left: calc(10vw - 10px);
-      top: 1.33vw;
     }
 
     /* ── STATS BAR ─────────────────────────────────────── */
@@ -737,27 +717,18 @@
     footer a:hover { text-decoration: underline; }
 
     /* ── RESPONSIVE ────────────────────────────────────── */
-    @media (max-width: 1280px) {
-      .hero-line1,
-      .hero-title .accent {
-        left: calc(27.15vw - 145px);
-      }
-    }
-
     @media (max-width: 1024px) {
       .about-grid { gap: 3.5rem; }
       .contact-grid { gap: 3rem; }
     }
 
     @media (max-width: 768px) {
-      .hero-line1,
-      .hero-title .accent {
-        left: 0;
-        top: 0;
-      }
-      .hero-subtitle {
-        left: 0;
-        top: 1.5rem;
+      .hero-content {
+        left: 5vw;
+        top: auto;
+        transform: none;
+        padding-top: 8rem;
+        max-width: 90vw;
       }
 
       nav { padding: 0 1.5rem; }
