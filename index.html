@@ -252,6 +252,8 @@
 
     .hero-mobile-truck { display: none; }
     .hero-accent-mobile { display: none; }
+    .hero-line1-mobile-a { display: none; }
+    .hero-line1-mobile-b { display: none; }
 
     .btn-primary {
       display: inline-flex;
@@ -818,13 +820,27 @@
       .hero-title {
         font-size: clamp(2.4rem, 8vw, 3.5rem);
         margin-bottom: 0;
-        padding: calc(1.4rem + 5cm) 1.5rem 0.5rem;
+        padding: calc(1.4rem + 5cm + 1in) 1.5rem 0.5rem;
         white-space: nowrap;
         position: relative;
         z-index: 3;
         text-align: center;
       }
-      .hero-line1 { left: 0; top: 0; font-size: 1em; white-space: nowrap; }
+      .hero-line1 { display: none; }
+      .hero-line1-mobile-a {
+        display: block;
+        left: 0; top: 0;
+        font-size: 1em;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .hero-line1-mobile-b {
+        display: block;
+        font-size: 1.35em;
+        font-style: italic;
+        white-space: nowrap;
+        text-align: center;
+      }
       .hero-title .hero-accent-desktop { display: none; }
       .hero-mobile-truck {
         display: block;
@@ -840,7 +856,7 @@
       .hero-accent-mobile {
         display: block;
         position: absolute;
-        bottom: calc(1.2rem + 48px + 58px + 76px + 1cm);
+        bottom: calc(1.2rem + 48px + 58px + 76px + 1cm + 1in);
         left: calc(1.5rem + 29px + 38px);
         font-family: 'Poppins', sans-serif;
         font-weight: 900;
@@ -953,6 +969,8 @@
     <div class="hero-content">
 <h1 class="hero-title">
         <span class="hero-line1" data-i18n="hero_line1">Make your vehicle</span>
+        <span class="hero-line1-mobile-a" data-i18n="hero_line1a">Make your</span>
+        <span class="hero-line1-mobile-b" data-i18n="hero_line1b">vehicle</span>
         <span class="accent hero-accent-desktop" data-i18n="hero_accent">A Moving Ad</span>
       </h1>
       <div class="hero-mobile-truck" aria-hidden="true">
@@ -1434,6 +1452,8 @@
         nav_contact:     'Contact',
         nav_cta:         'Get a Quote  (514) 260-8566',
         hero_line1:      'Make your vehicle',
+        hero_line1a:     'Make your',
+        hero_line1b:     'vehicle',
         hero_accent:     'A Moving Ad',
         hero_subtitle:   'Premium vehicle wraps, tinting, lettering, and headlight restoration in Montreal. Fast, honest, and reliable service for personal cars and commercial fleets.',
         btn_quote:       'Free Quote',
@@ -1493,6 +1513,8 @@
         nav_contact:     'Contact',
         nav_cta:         'Devis gratuit (514) 260-8566',
         hero_line1:      'Faites de votre véhicule',
+        hero_line1a:     'Faites de votre',
+        hero_line1b:     'véhicule',
         hero_accent:     'Une Pub Ambulante',
         hero_subtitle:   'Pose de vinyle, vitres teintées, lettrage et restauration de phares à Montréal. Service rapide, honnête et fiable pour véhicules personnels et flottes commerciales.',
         btn_quote:       'Devis gratuit',
