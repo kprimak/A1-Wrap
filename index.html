@@ -31,7 +31,7 @@
       --img-ph:      #2a2a2a;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -866,6 +866,16 @@
         text-shadow: 0 2px 12px rgba(0,0,0,0.7);
         letter-spacing: -0.03em;
         line-height: 1;
+      }
+      /* French-only mobile overrides */
+      html[lang="fr"] .hero-accent-mobile {
+        bottom: calc(1.2rem + 48px + 58px + 76px + 1in + 0.3cm - 0.5cm);
+      }
+      html[lang="fr"] .hero-line1-mobile-a {
+        font-size: 1em;
+      }
+      html[lang="fr"] .hero-line1-mobile-b {
+        font-size: 1em;
       }
       .hero-subtitle {
         left: 0; top: 0;
