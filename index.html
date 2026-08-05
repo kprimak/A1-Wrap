@@ -595,6 +595,16 @@
       color: var(--white);
     }
 
+    .btn-google-review {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: transparent; border: 2px solid var(--teal);
+      color: var(--white); font-family: 'Poppins', sans-serif;
+      font-weight: 700; font-size: 1rem; padding: 0.75rem 1.75rem;
+      border-radius: 8px; text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-google-review:hover { background: var(--teal); color: var(--navy); }
+
     /* ── CTA SECTION ───────────────────────────────────── */
     .cta-section {
       background: var(--navy);
@@ -1231,6 +1241,12 @@
           <p class="t-author" data-i18n="review6_author">— Costa D.</p>
         </article>
       </div>
+      <div style="text-align:center; margin-top: 2.5rem;">
+        <a href="https://share.google/GHkfF0SkqrEvAI90a" target="_blank" rel="noopener noreferrer" class="btn-google-review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span data-i18n="btn_google_review">Leave us a Google Review</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1487,6 +1503,7 @@
         about_stat_sub: 'Customer Satisfaction',
         testimonials_title_html: 'What Our <span class="accent">Clients Say</span>',
         testimonials_subtitle:   'A reputation built on trust and quality.',
+        btn_google_review:       'Leave us a Google Review',
         review1_text:   '"Very reliable young men, an absolute pleasure to work with! They checked in to make sure I was satisfied with everything throughout every part of the process! Would love to work with them again."',
         review1_author: '— Kristina Primak, Kipode',
         review2_text:   '"Competitive pricing, deadlines met and the finish is perfect. My clients spot our vehicles everywhere in town!"',
@@ -1560,6 +1577,7 @@
         about_stat_sub: 'Satisfaction Client',
         testimonials_title_html: 'Ce que disent nos <span class="accent">Clients</span>',
         testimonials_subtitle:   'Une réputation bâtie sur la confiance et la qualité.',
+        btn_google_review:       'Laisser un avis Google',
         review1_text:   '« De très jeunes hommes fiables, un vrai plaisir de travailler avec eux ! Ils ont vérifié à chaque étape que j\'étais satisfaite. J\'adorerais retravailler avec eux. »',
         review1_author: '— Kristina Primak, Kipode',
         review2_text:   '« Prix compétitifs, délais respectés et la finition est parfaite. Mes clients repèrent nos véhicules partout en ville ! »',
